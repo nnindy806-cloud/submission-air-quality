@@ -159,7 +159,7 @@ plt.rcParams.update({"font.family": "sans-serif", "text.color": "#27406e",
 
 @st.cache_data
 def load_data():
-    data = pd.read_csv("main_data.csv")
+    data = pd.read_csv("dashboard/main_data.csv")
     data["datetime"] = pd.to_datetime(data["datetime"])
     return data
 
