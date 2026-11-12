@@ -158,8 +158,11 @@ plt.rcParams.update({"font.family": "sans-serif", "text.color": "#27406e",
 # =========================================================
 
 @st.cache_data
+BASE_DIR = Path(__file__).resolve().parent
+ASSETS = BASE_DIR / "assets"
+
 def load_data():
-    data = pd.read_csv("dashboard/main_data.csv")
+    data = pd.read_csv(BASE_DIR / "main_data.csv")
     data["datetime"] = pd.to_datetime(data["datetime"])
     return data
 
